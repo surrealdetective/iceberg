@@ -1,0 +1,2 @@
+describe Goal do 
+end
