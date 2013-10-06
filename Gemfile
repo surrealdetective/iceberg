@@ -44,6 +44,8 @@ group :development, :test do
   # gem "launchy", "2.2.0"
 end
 
+gem 'devise', "~> 3.0.3"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
