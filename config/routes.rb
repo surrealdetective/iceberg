@@ -4,8 +4,9 @@ Iceberg::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'goal#index'
-  get 'goals/:id' => 'goal#index'
+  root 'welcome#in'
+  resources :goals, :only => [:index]
+  # get 'goals/:id' => 'goal#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

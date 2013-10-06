@@ -1,0 +1,63 @@
+#user_nav {
+  border-bottom: 3px solid grey;
+}
+
+@media only screen and (min-width: 320px) {
+  #user_nav {
+    width: 100%
+  }
+
+  #top_logo, #logo {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  #login {
+    float: none;
+    text-align: center;
+  }
+
+  .inform {
+    font-size: 3.5em;
+    padding: 0;
+    line-height: 0.95em;
+    margin: 0.1em auto;
+    text-align: center;
+  }
+
+  .engage {
+    margin: 0 auto;
+    font-size: 1.25em;
+    text-align: center;
+  }
+
+  .invite {
+    text-align: center;
+  }
+
+  .underline {
+    font-size: 0.6em;
+    text-decoration: underline;
+    padding-left: 0.5em;
+  }
+
+  #yes {
+    margin-left: 2em;
+    padding: 6px 12px;
+  }
+}
+
+/*#login {
+  padding-top: 1em;
+  padding-right: 1em;
+  float: right;
+}
+
+#top_logo, #logo {
+  display: inline-block;
+  float: left;
+  /*text-align: left;*/
+/*}*/
