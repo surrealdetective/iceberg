@@ -1,8 +1,59 @@
-<p class="inform">7% of Americans drink less than 1 glass of water a day.</p>
+<div id="spacer">
+  <p class="inform show">
+    7% of Americans drink less than 1 glass of water a day.
+  </p>
 
-<p class="engage">Has it happened to you?</p>
+  <p class="engage show">
+    Has it happened to you?
+  </p>
 
-<div class="invite">
-  <button type="button" id="yes" class="btn btn-success">Yes</button>
-  <%= link_to "Nope", "#", :class => "underline" %>
+  <p class="inform hide">
+    <em>Too often,</em> is your <em id="urine">urine</em> darker than <em id="urine">this color?</em> 
+  </p>
+
+  <p class="engage hide">
+    Let's keep this a secret...
+  </p>
+
+  <h5 class="hide convert">
+    Try drinking one extra glass of water everyday with Iceberg Habits.
+  </h5>  
+  <h5 class="hide convert">Iceberg offers:</h5>
+
+  <ul class="hide convert">
+    <li>Reminders (email, text, or Twitter)</li>
+    <li>Tipping Points (so habits stick)</li>
+    <li>Rewards (1st month free, 1 dollar to charity for first 30-day habit)</li>
+  </ul>
+
+
+  <div class="invite">
+    <button type="button" id="yes" class="btn btn-success show">
+      Yes
+    </button>
+    <button type="button" id="yes2" class="btn btn-success hide">
+      Yes
+    </button>
+    <%= link_to "Nope", "#", :class => "underline" %>
+  </div>
+
+  <div id="registration" class="convert hide">
+    <%= render "devise/registrations/registration", :resource => @user, :resource_name => "user" %>
+  </div>
+
 </div>
+
+<script>
+  $("#yes").on('click', function(){
+    $('p').removeClass('hide');
+    $('#yes2').removeClass('hide');
+    $('.show').addClass('hide').removeClass('show');
+    $('.underline').text("umm...");
+  });
+
+  $("#yes2").on('click', function(){
+    $('p').addClass('hide');
+    $('.invite').addClass('hide');
+    $('.convert').removeClass('hide')
+  });
+</script>
